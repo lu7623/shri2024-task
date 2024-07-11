@@ -13,7 +13,7 @@ export default function Main() {
             initedRef.current = true;
             setActiveTab(new URLSearchParams(location.search).get('tab') || 'all');
         }
-    });
+    },[]);
 
     const onSelectInput = event => {
         setActiveTab(event.target.value);
@@ -21,7 +21,7 @@ export default function Main() {
 
     let sizes = [];
     const onSize = size => {
-        sizes = [...sizes, size];
+        sizes.push(size);
     };
 
     React.useEffect(() => {
@@ -30,7 +30,7 @@ export default function Main() {
         if (newHasRightScroll !== hasRightScroll) {
             setHasRightScroll(newHasRightScroll);
         }
-    });
+    }, [sizes]);
 
     const onArrowCLick = () => {
         const scroller = ref.current.querySelector('.section__panel:not(.section__panel_hidden)');

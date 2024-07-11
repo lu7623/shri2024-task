@@ -1,8 +1,8 @@
 import React from "react";
 
 export default function Header() {
-    let [expanded, setExpanded] = React.useState(false);
-    let [toggled, setToggled] = React.useState(false);
+    const [expanded, setExpanded] = React.useState(false);
+    const [toggled, setToggled] = React.useState(false);
 
     const onClick = () => {
         if (!toggled) {
