@@ -3,6 +3,8 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: [
@@ -30,25 +32,22 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
-        generator: {
-          filename: path.join("[name].[ext]"),
-        },
+        test: /\.(png|svg|jpg|jpeg|webp)$/i,
+        type: 'asset/resource',
       },
-      {
-        test: /\.svg$/,
-        type: "asset/resource",
-        generator: {
-          filename: path.join("[name].[ext]"),
-        },
-      },
+    
     ],
   },
   resolve: {
     extensions: [".js", ".jsx"],
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [{
+        from: path.resolve(__dirname, 'src/assets/'),
+        to: path.resolve(__dirname, 'dist/assets')
+      }]
+    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src/template.html"),
       filename: "index.html",
@@ -80,7 +79,9 @@ module.exports = {
             ],
           },
         },
+       loader:false
       }),
+      new ImageminWebpWebpackPlugin()
     ],
   },
 };

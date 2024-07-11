@@ -628,50 +628,52 @@ function Event(props) {
   });
 }
 ;// CONCATENATED MODULE: ./src/components/appData.js
+var Items = [{
+  icon: 'light2',
+  iconLabel: 'Освещение',
+  title: 'Xiaomi Yeelight LED Smart Bulb',
+  subtitle: 'Включено'
+}, {
+  icon: 'light',
+  iconLabel: 'Освещение',
+  title: 'D-Link Omna 180 Cam',
+  subtitle: 'Включится в 17:00'
+}, {
+  icon: 'temp',
+  iconLabel: 'Температура',
+  title: 'Elgato Eve Degree Connected',
+  subtitle: 'Выключено до 17:00'
+}, {
+  icon: 'light',
+  iconLabel: 'Освещение',
+  title: 'LIFX Mini Day & Dusk A60 E27',
+  subtitle: 'Включится в 17:00'
+}, {
+  icon: 'light2',
+  iconLabel: 'Освещение',
+  title: 'Xiaomi Mi Air Purifier 2S',
+  subtitle: 'Включено'
+}, {
+  icon: 'light',
+  iconLabel: 'Освещение',
+  title: 'Philips Zhirui',
+  subtitle: 'Включено'
+}, {
+  icon: 'light',
+  iconLabel: 'Освещение',
+  title: 'Philips Zhirui',
+  subtitle: 'Включено'
+}, {
+  icon: 'light2',
+  iconLabel: 'Освещение',
+  title: 'Xiaomi Mi Air Purifier 2S',
+  subtitle: 'Включено'
+}];
+var allItems = new Array(64).fill(Items).flat();
 var TABS = {
   all: {
     title: 'Все',
-    items: [{
-      icon: 'light2',
-      iconLabel: 'Освещение',
-      title: 'Xiaomi Yeelight LED Smart Bulb',
-      subtitle: 'Включено'
-    }, {
-      icon: 'light',
-      iconLabel: 'Освещение',
-      title: 'D-Link Omna 180 Cam',
-      subtitle: 'Включится в 17:00'
-    }, {
-      icon: 'temp',
-      iconLabel: 'Температура',
-      title: 'Elgato Eve Degree Connected',
-      subtitle: 'Выключено до 17:00'
-    }, {
-      icon: 'light',
-      iconLabel: 'Освещение',
-      title: 'LIFX Mini Day & Dusk A60 E27',
-      subtitle: 'Включится в 17:00'
-    }, {
-      icon: 'light2',
-      iconLabel: 'Освещение',
-      title: 'Xiaomi Mi Air Purifier 2S',
-      subtitle: 'Включено'
-    }, {
-      icon: 'light',
-      iconLabel: 'Освещение',
-      title: 'Philips Zhirui',
-      subtitle: 'Включено'
-    }, {
-      icon: 'light',
-      iconLabel: 'Освещение',
-      title: 'Philips Zhirui',
-      subtitle: 'Включено'
-    }, {
-      icon: 'light2',
-      iconLabel: 'Освещение',
-      title: 'Xiaomi Mi Air Purifier 2S',
-      subtitle: 'Включено'
-    }]
+    items: allItems
   },
   kitchen: {
     title: 'Кухня',
@@ -735,7 +737,6 @@ var TABS = {
     }]
   }
 };
-TABS.all.items = new Array(64).fill(TABS.all.items).flat();
 var TABS_KEYS = Object.keys(TABS);
 ;// CONCATENATED MODULE: ./src/components/main.jsx
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
