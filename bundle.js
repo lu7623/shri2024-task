@@ -790,9 +790,6 @@ function Main() {
     var sumWidth = sizes.reduce(function (acc, item) {
       return acc + item.width;
     }, 0);
-    var sumHeight = sizes.reduce(function (acc, item) {
-      return acc + item.height;
-    }, 0);
     var newHasRightScroll = sumWidth > ref.current.offsetWidth;
     if (newHasRightScroll !== hasRightScroll) {
       setHasRightScroll(newHasRightScroll);
