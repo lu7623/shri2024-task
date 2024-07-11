@@ -19,13 +19,13 @@ export default function Main() {
         setActiveTab(event.target.value);
     };
 
-    let sizes = [];
+    const sizes = [];
     const onSize = size => {
         sizes.push(size);
     };
 
     React.useEffect(() => {
-        const sumWidth = sizes.reduce((acc, item) => acc + item.width, 0);
+        const sumWidth = sizes.reduce((acc, item) => acc + item, 0);
         const newHasRightScroll = sumWidth > ref.current.offsetWidth;
         if (newHasRightScroll !== hasRightScroll) {
             setHasRightScroll(newHasRightScroll);

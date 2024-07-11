@@ -604,14 +604,10 @@ function Event(props) {
   var onSize = props.onSize;
   react.useEffect(function () {
     var width = ref.current.offsetWidth;
-    var height = ref.current.offsetHeight;
     if (onSize) {
-      onSize({
-        width: width,
-        height: height
-      });
+      onSize(width);
     }
-  });
+  }, [onSize]);
   return /*#__PURE__*/(0,jsx_runtime.jsx)("li", {
     ref: ref,
     className: 'event' + (props.slim ? ' event_slim' : ''),
@@ -784,7 +780,7 @@ function Main() {
   };
   react.useEffect(function () {
     var sumWidth = sizes.reduce(function (acc, item) {
-      return acc + item.width;
+      return acc + item;
     }, 0);
     var newHasRightScroll = sumWidth > ref.current.offsetWidth;
     if (newHasRightScroll !== hasRightScroll) {
