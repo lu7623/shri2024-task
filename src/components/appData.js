@@ -106,7 +106,5 @@ export const TABS = {
         }]
     }
 };
-for (let i = 0; i < 6; ++i) {
-    TABS.all.items = [...TABS.all.items, ...TABS.all.items];
-}
+TABS.all.items = new Array(64).fill(TABS.all.items).flat();
 export const TABS_KEYS = Object.keys(TABS);

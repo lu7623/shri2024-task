@@ -12,7 +12,6 @@ module.exports = {
   output: {
     path: path.join(__dirname, "dist"),
     filename: "bundle.js",
-    assetModuleFilename: path.join("images", "[name].[contenthash][ext]"),
   },
   module: {
     rules: [
