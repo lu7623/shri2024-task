@@ -596,48 +596,6 @@ function Header() {
     })]
   });
 }
-;// CONCATENATED MODULE: ./src/components/footer.jsx
-
-function Footer() {
-  return /*#__PURE__*/(0,jsx_runtime.jsxs)("footer", {
-    "class": "footer",
-    children: [/*#__PURE__*/(0,jsx_runtime.jsxs)("ul", {
-      "class": "footer__list",
-      children: [/*#__PURE__*/(0,jsx_runtime.jsx)("li", {
-        "class": "footer__item",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
-          "class": "footer__link",
-          href: "/",
-          children: "\u041F\u043E\u043C\u043E\u0449\u044C"
-        })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("li", {
-        "class": "footer__item",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
-          "class": "footer__link",
-          href: "/",
-          children: "\u041E\u0431\u0440\u0430\u0442\u043D\u0430\u044F \u0441\u0432\u044F\u0437\u044C"
-        })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("li", {
-        "class": "footer__item",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
-          "class": "footer__link",
-          href: "/",
-          children: "\u0420\u0430\u0437\u0440\u0430\u0431\u043E\u0442\u0447\u0438\u043A\u0430\u043C"
-        })
-      }), /*#__PURE__*/(0,jsx_runtime.jsx)("li", {
-        "class": "footer__item",
-        children: /*#__PURE__*/(0,jsx_runtime.jsx)("a", {
-          "class": "footer__link",
-          href: "/",
-          children: "\u0423\u0441\u043B\u043E\u0432\u0438\u044F \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D\u0438\u044F"
-        })
-      })]
-    }), /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
-      "class": "footer__copyright",
-      children: "\xA9 1997\u20132023 \u041E\u041E\u041E \xAB\u042F\u043D\u0434\u0435\u043A\u0441\xBB"
-    })]
-  });
-}
 ;// CONCATENATED MODULE: ./src/components/event.jsx
 
 
@@ -1027,10 +985,9 @@ function Main() {
 
 
 
-
 function App() {
   return /*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(Header, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(Main, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(Footer, {})]
+    children: [/*#__PURE__*/(0,jsx_runtime.jsx)(Header, {}), /*#__PURE__*/(0,jsx_runtime.jsx)(Main, {})]
   });
 }
 ;// CONCATENATED MODULE: ./src/index.js
